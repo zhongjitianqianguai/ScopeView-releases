@@ -6,7 +6,10 @@ See at a glance which LSPosed modules target an app, without opening them one by
 集中查看模块更新，支持单个更新和批量更新。<br>
 Check module updates in one place and update them individually or in a batch.
 
-[项目仓库 / Repository](https://github.com/zhongjitianqianguai/ScopeView-releases) · [发布版本 / Releases](https://github.com/zhongjitianqianguai/ScopeView-releases/releases)
+域见是独立的 Root 配套工具，无需激活 LSPosed 模块也可使用原有功能。<br>
+ScopeView is a standalone Root companion utility; its existing features work without activating the LSPosed module.
+
+[公开下载 / Downloads](https://github.com/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview/releases) · [官方索引 / Official index](https://github.com/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview)
 
 ## 主要功能 / Features
 
@@ -38,11 +41,11 @@ Check module updates in one place and update them individually or in a batch.
 
 ## 作用域 / Scope
 
-仓库作用域声明为 LSPosed 管理器（`org.lsposed.manager`）。<br>
-The repository scope declaration lists LSPosed Manager (`org.lsposed.manager`).
+作用域仅声明域见自身（`io.github.zhongjitianqianguai.scopeview`），无需勾选其他应用。<br>
+The scope declaration only lists ScopeView itself (`io.github.zhongjitianqianguai.scopeview`); no other apps need to be selected.
 
-当前版本通过 Root 只读读取管理器数据，不 Hook 应用，无需勾选作用域。<br>
-The current version reads Manager data through Root without hooking apps or requiring scope selection.
+Xposed 入口仅在域见主进程加载时写一条框架日志，不拦截应用行为；读取配置和更新模块仍通过 Root 完成，无需激活该模块。<br>
+The Xposed entry only writes a framework log when ScopeView's main process loads and does not intercept app behavior; configuration reads and module updates still use Root and do not require module activation.
 
 ## 开始使用 / Getting started
 
