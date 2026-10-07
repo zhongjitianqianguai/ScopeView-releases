@@ -1,5 +1,8 @@
 # 域见 ScopeView
 
+每次更新 LSP 模块都要一个个点进去下载，根本不清楚有多少模块同时作用于某个应用？我来帮你。<br>
+Updating LSP modules means opening each one to download, with no clear view of how many modules target the same app? I'm here to help.
+
 一眼看清哪些 LSPosed 模块作用于某个应用，不用再逐个点开查找。<br>
 See at a glance which LSPosed modules target an app, without opening them one by one.
 
@@ -8,6 +11,17 @@ Check module updates in one place and update them individually or in a batch.
 
 域见是独立的 Root 配套工具，无需激活 LSPosed 模块也可使用原有功能。<br>
 ScopeView is a standalone Root companion utility; its existing features work without activating the LSPosed module.
+
+<p align="center">
+  <a href="https://github.com/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview/stargazers"><img src="https://img.shields.io/github/stars/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview?style=for-the-badge&logo=github&label=Star" alt="GitHub Stars"></a>
+  <a href="https://t.me/ScopeView_Offical"><img src="https://img.shields.io/badge/Telegram-Official_Group-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Official Group"></a>
+  <a href="https://t.me/zhongjitianqianguai3"><img src="https://img.shields.io/badge/Telegram-Release_Channel-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Release Channel"></a>
+</p>
+
+<p align="center">
+如果域见对你有帮助，欢迎点一个 Star 支持项目 ⭐<br>
+If ScopeView helps you, please consider leaving a Star.
+</p>
 
 [公开下载 / Downloads](https://github.com/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview/releases) · [官方索引 / Official index](https://github.com/Xposed-Modules-Repo/io.github.zhongjitianqianguai.scopeview)
 
@@ -73,17 +87,3 @@ Package names and versions are verified before installation, while Android retai
 
 Root 安装失败时，可将已验证的 APK 交给系统安装器。<br>
 If Root installation fails, the verified APK can be handed to the system installer.
-
-作用域记录保留 Android 用户 ID，应用名称和已安装状态按当前用户显示。<br>
-Scope records retain Android user IDs, while app names and installation status are resolved for the current user.
-
-Android 的同包 APK 由多个用户共享，因此更新模块也会更新其他已安装该模块的用户所使用的程序代码。<br>
-Android shares package code across users, so updating a module also updates the code used by other users who have that package installed.
-
-## 测试版迁移 / Migrating from test builds
-
-正式版使用专用签名，无法直接覆盖此前本地安装的调试版。<br>
-The release uses a dedicated signing key and cannot directly replace a locally installed debug build.
-
-卸载调试版会删除其应用数据，迁移前请保留需要的本地设置。<br>
-Uninstalling the debug build removes its app data; preserve any local settings you need before migrating.
