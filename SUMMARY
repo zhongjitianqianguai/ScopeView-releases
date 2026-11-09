@@ -1,8 +1,8 @@
-发现新模块、看清应用作用域、集中处理更新。
-Discover new modules, see app scopes and manage updates in one place.
+按应用查看作用域，在仓库查找作者声明适用的模块，并集中管理更新。
+View app scopes, find modules declared for an app and manage updates in one place.
 
-浏览最近更新与新收录模块，支持摘要预览、收藏和已读标记。
-Browse recent updates and new listings with previews, bookmarks and read tracking.
+发现支持全部、未看与收藏，查看简介、README、历史版本并在应用内下载。
+Discover offers All, Unseen and Saved, with descriptions, README, release history and in-app downloads.
 
 域见声明为自身的 LSPosed 模块，核心功能不依赖模块激活。
 ScopeView declares itself as an LSPosed module; core features do not depend on module activation.

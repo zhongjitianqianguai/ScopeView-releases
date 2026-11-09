@@ -40,26 +40,26 @@
 
 ## 主要功能 / Features
 
-- **发现模块**：浏览最近更新和新收录模块，卡片直接查看简介与更新摘要；支持搜索、通道选择、隐藏已安装/已收藏、Star 排序、收藏、未看记录和屏蔽恢复。<br>
-  **Discover modules:** Browse recent updates and new listings with descriptions and release previews on each card; search, choose a channel, hide installed or saved modules, sort by stars, bookmark, track unseen modules and manage blocked modules.
-- **按需查看详情**：原地展开或打开详情，查看 README、发布说明和历史版本；固定版本与下载入口便于跳过长文，APK 附件可在应用内下载、校验并通过 Root 或系统安装器安装。<br>
-  **Details on demand:** Expand a card or open its details for the README, release notes and history. A fixed version and download shortcut bypasses long text; download and verify APK attachments in the app, then install with Root or the system installer.
-- **按应用查看模块**：查看一个应用被哪些模块选入作用域，显示应用名称、包名、图标及 Android 用户信息。<br>
-  **Modules by app:** See which modules include an app in their scopes, with app names, package names, icons and Android user information.
+- **发现模块**：按全部、未看和收藏浏览仓库，卡片查看简介与版本摘要；支持搜索、通道选择、隐藏已安装/已收藏、Stars 排序、收藏计数和一键看完。<br>
+  **Discover modules:** Browse All, Unseen and Saved with descriptions and release previews; search, choose a channel, hide installed or saved modules, sort by Stars, bookmark and mark unseen modules as seen.
+- **按需查看详情**：在卡片展开当前通道下载，另开详情查看 README、发布说明和历史版本；固定版本与下载入口便于跳过长文，APK 附件可在应用内下载、校验并通过 Root 或系统安装器安装。<br>
+  **Details on demand:** Expand current-channel downloads in a card, or open details for the README, release notes and history. A fixed version and download shortcut bypasses long text; download and verify APK attachments in the app, then install with Root or the system installer.
+- **按应用查看模块**：「本地」查看已有配置；「仓库」列出当前用户已安装的应用，按作者声明的 scope 包名精确查找已安装和未安装模块，不根据名称或简介猜测适用关系。<br>
+  **Modules by app:** Local shows existing scope settings; Repo lists apps installed for the current user and finds installed or uninstalled modules by exact package names in authors’ declared scopes, without guessing from names or descriptions.
 - **查看模块更新**：跟随管理器选择的官方来源和通道，检查已安装模块详情并核对缓存；失败时保留已有结果，识别仅名称变化的更新。<br>
   **Check module updates:** Follow the Manager’s official source and channel, check installed-module details and reconcile cached results; retain existing results on failure and recognize version-name-only updates.
 - **通知快捷入口**：默认开启，点击通知打开域见；授权 Root 和通知权限后，划掉后台仍保留入口，设置中可关闭并保存选择。<br>
   **Notification shortcut:** Enabled by default; tap to open ScopeView. With Root and notification permission granted, it remains after removing the app from Recents; turn it off in Settings with your choice saved.
 - **优先显示更新**：有更新的模块始终排在前面，各组内保留你选择的排序规则。<br>
   **Updates first:** Modules with available updates always appear first, with your chosen sort order preserved within each group.
-- **单个、多选或全部更新**：支持更新单个模块、勾选后“更新所选”或“更新全部”；Beta、Nightly 和多 APK 项目由你逐项选择或跳过，没有 APK 的更新需你确认跳过。<br>
-  **Individual, selected or all updates:** Update one module, select several with Update selected or use Update all; choose or skip each Beta, Nightly, or multi-APK item, and explicitly skip updates with no APK.
+- **单个、多选或全部更新**：支持更新单个模块；「一键更新」在无选择时更新全部，有选择时只更新选中模块；Beta、Nightly 和多 APK 项目由你逐项选择或跳过，没有 APK 的更新需你确认跳过。<br>
+  **Individual, selected or all updates:** Update one module, or use one button for all available updates without a selection and only selected modules with a selection; choose or skip each Beta, Nightly, or multi-APK item, and explicitly skip updates with no APK.
 - **并行下载、有序安装**：单独点击多个模块时，最多三个下载并行，安装仍逐个执行；同一模块不重复排队，域见自身最后更新。<br>
   **Parallel downloads, ordered installs:** Start up to three individual downloads in parallel while installation stays sequential; avoid duplicate requests for the same module and update ScopeView itself last.
 - **取消剩余任务**：等待当前更新完成，再停止后续更新。<br>
   **Cancel remaining updates:** Let the current update finish, then stop the remaining items.
-- **搜索与排序**：按名称或包名搜索，为应用、模块和作用域详情分别保存排序规则。<br>
-  **Search and sort:** Search by name or package name and save separate sort preferences for apps, modules and scope details.
+- **搜索与排序**：按名称、包名和说明搜索，发现还可搜索作者；为应用、模块和作用域详情分别保存排序规则，支持收藏优先。<br>
+  **Search and sort:** Search names, package names and descriptions, plus authors in Discover; save separate sorting for apps, modules and scope details, with Saved first available.
 - **多语言界面**：默认跟随系统语言，也可手动选择简体中文、英文或俄语。<br>
   **Multiple languages:** Follow the system language by default or choose Simplified Chinese, English or Russian manually.
 - **跳转管理器**：从模块详情打开 LSPosed 管理器中的对应模块。<br>
@@ -72,14 +72,14 @@
 - **忽略更新与卸载**：在模块卡片的“更多”中永久忽略该模块更新，扳手设置可恢复；忽略项保留显示和主动单独更新，不参与更新计数、批量更新或后台提醒。卸载交由系统确认，返回后核对目标包的实际安装状态。<br>
   **Ignore updates and uninstall:** Permanently ignore a module through its card's More menu and restore it in Settings. Ignored modules remain visible and can be updated individually, while being excluded from counts, batch updates and reminders. Uninstallation uses system confirmation and checks the target package after return.
 
-- **后台更新与提醒**：默认每四小时处理模块、作用域和发现列表，有更新时通知；进入应用先显示可操作的缓存；已有待更新项时保留列表，无缓存或过期时按现有策略补全；返回前台只静默读取本地作用域，不因此重扫模块或联网刷新目录。支持手动刷新和独立关闭，不自动下载或安装；系统可能延后任务，强行停止后需重新打开域见。<br>
-  **Background refresh and reminders:** Refresh module, scope and Discover lists every four hours by default and notify about updates. Open actionable cached lists immediately. Retain lists with pending updates and fill missing or expired caches under the existing refresh policy. On resume, read local scopes quietly without triggering a module scan or network catalog refresh. Refresh manually or disable background checks separately. No automatic downloads or installation; Android may delay jobs, and ScopeView must be reopened after force stop.
-- **配置备份**：在扳手中导出和导入用户设置、外观、标签位置、排序、收藏、发现屏蔽、忽略更新和自定义来源，包含有效默认值；不复制 Root、作用域、安装任务、APK 或目录缓存。<br>
-  **Configuration backup:** Export and import user settings, appearance, tab position, sort order, bookmarks, blocked Discover modules, ignored modules and custom sources, including effective defaults. Root state, scopes, installation tasks, APKs and catalog caches are excluded.
+- **后台更新与提醒**：默认每四小时计划处理模块、作用域和发现列表，有更新时通知；进入应用先显示可操作的缓存。「进入应用时检查模块更新」单独控制，前台目录检查有十分钟冷却；返回前台的本地作用域读取独立静默进行。支持手动下拉刷新，不自动下载或安装；系统可能延后后台任务。<br>
+  **Background refresh and reminders:** Schedule module, scope and Discover refreshes every four hours and notify about updates. Show actionable cached lists first. Foreground update checks have a separate switch and a ten-minute cooldown; local scope reads on return remain quiet and independent. Pull to refresh manually. No automatic downloads or installation; Android may delay background jobs.
+- **配置备份**：在扳手中导出和导入用户设置、外观、标签位置、排序、收藏、忽略更新和自定义来源，包含有效默认值；不复制 Root、作用域、安装任务、APK 或目录缓存。<br>
+  **Configuration backup:** Export and import user settings, appearance, tab position, sort order, bookmarks, ignored modules and custom sources, including effective defaults. Root state, scopes, installation tasks, APKs and catalog caches are excluded.
 - **后台恢复**：可控制开机恢复与进程退出后的后台恢复，授权 Root 后提供一次性开机后备，不自动弹出界面；系统限制及主动强行停止仍按 Android 行为处理。<br>
   **Background recovery:** Control boot restoration and recovery after process exit, with a one-shot Root boot fallback when authorized and no automatic screen launch; Android restrictions and user force-stop remain respected.
-- **Material 3 Expressive**：支持跟随系统、浅色、深色及系统动态配色；首页标签可置顶或置底并左右滑动，设置和详情保留固定工具栏，切页与旋转后恢复浏览位置。<br>
-  **Material 3 Expressive:** Choose system, light or dark themes and dynamic colors. Place home tabs at the top or bottom and swipe between them; Settings and details retain fixed toolbars, with browsing position restored across tabs and rotation.
+- **M3E / MIUIX 外观**：支持浅深色、系统动态配色、自定义色盘、液态玻璃及独立炫彩导航；首页标签可显隐、拖动排序、自选启动页，栏体高度与底部距离分别设置。<br>
+  **M3E / MIUIX appearance:** Choose light/dark themes, system colors, a custom palette, liquid glass and separate colorful navigation. Show/hide or reorder tabs, choose a startup page, and adjust bar height separately from bottom spacing.
 
 ## 使用要求 / Requirements
 
@@ -102,17 +102,17 @@ The Xposed entry only writes a framework log when ScopeView's main process loads
 
 1. 打开域见，尚未授权时每次启动主动尝试一次 Root 申请，也可使用明确的授权按钮手动重试。授权后读取本机作用域；应用列表受限时，可用 Root 补充当前用户的模块识别。<br>
    Open ScopeView for one proactive Root request per launch while permission is missing, or retry with the explicit grant button. After authorization, read local scopes; Root can supplement module discovery for the current user when the ordinary app list is restricted.
-2. 在应用列表中搜索目标应用，查看关联模块。<br>
-   Search for an app in the app list to see its associated modules.
-3. 进入应用先显示缓存；点击“刷新”统一扫描模块、读取作用域并检查更新，也可在“发现”中刷新目录。后台自动刷新默认开启，可在扳手中关闭。<br>
-   Open cached lists first. Refresh scans modules, reads scopes and checks updates together; Discover can refresh its catalog separately. Background refresh is enabled by default and can be disabled in Settings.
-4. 切换到模块更新列表，选择单个更新、勾选后“更新所选”或“更新全部”。<br>
-   Switch to the module update list to update one module, use Update selected or Update all.
+2. 在「作用域」选择「本地」查看已有配置，或选择「仓库」搜索目标应用，查看作者明确声明适用的模块。<br>
+   In Scopes, use Local for existing settings or Repo to find modules explicitly declared for an installed app.
+3. 进入应用先显示缓存；在列表下拉刷新模块、作用域和仓库目录。后台自动刷新默认开启，可在扳手中关闭。<br>
+   Open cached lists first. Pull down on a list to refresh modules, scopes or the repository catalog. Background refresh is enabled by default and can be disabled in Settings.
+4. 切换到模块更新列表，更新单个模块，或长按进入多选后使用「一键更新」；没有选择时该按钮更新全部。<br>
+   Switch to Updates to update one module, or long-press to select modules and use the shared update button; without a selection it updates all.
 5. 更新检查沿用管理器的来源和通道，兼容 Vector 的“仅正式版 / 包含预发布版”；联网失败时保留可用缓存。<br>
    Update checks follow the Manager’s source and channel, including Vector’s stable-only and prerelease-inclusive modes, and retain usable cached results when requests fail.
 
-6. 打开“发现”，按最近更新、新收录或未看浏览；展开摘要，收藏或屏蔽模块，进入详情查看 README、历史版本及安装附件。<br>
-   Open Discover to browse recent updates, new listings or unseen modules, expand previews, bookmark or block modules, and open details for the README, history and installable attachments.
+6. 打开“发现”，按全部、未看或收藏浏览；在卡片展开下载，进入详情查看 README 和历史版本。<br>
+   Open Discover to browse All, Unseen or Saved, expand downloads in a card, and open details for the README and version history.
 
 ## 使用说明 / Usage notes
 
